@@ -22,12 +22,14 @@ $(document).ready(function(){
    }
    
    function startFun(){
-   $('.box').on('click', clickFun);
+      $('.box').on('click', clickFun);
    }
 
    function clickFun(){
       
       $(this).find('.back').css("transform", "perspective(900px) rotateY(0deg)");
+
+      $(this).off();
 
       $(this).find('.front').css("transform", "perspective(900px) rotateY(180deg)");
       
